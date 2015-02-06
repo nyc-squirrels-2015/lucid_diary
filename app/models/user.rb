@@ -7,4 +7,13 @@ class User < ActiveRecord::Base
   validates :email, presence:true
   validates :email, uniqueness:true
   validates :password, presence:true
+
+  def self.authenticate(name,password)
+    @user = User.find_by(name: name)
+    if @user && @user.password == password
+      @user
+    else
+      nil
+    end
+  end
 end

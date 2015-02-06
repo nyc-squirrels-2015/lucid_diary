@@ -8,8 +8,12 @@ post '/categories' do
   redirect "/categories/#{new_category.id}"
 end
 
-get 'categories/' do
-	erb :all_categories
+get '/categories' do
+
+  @categories =  Category.all
+  p @categories 
+  erb :all_categories
+
 end
 
 get '/categories/:category_id' do

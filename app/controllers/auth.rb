@@ -3,26 +3,33 @@ get '/login' do
 end
 
 post '/login' do
-  @user = User.authenticate(params[:user][:email],params[:user][:password])
-  if @user
-    session[:user_id] = @user.id
-    redirect '/'
+  user = User.find_by(name:params[:user][:name])
+  if user.try(:authenticate, params[:user][:password])
+    session[:user_id] = user.id
+    redirect "/users/#{user.id}"
   else
     redirect '/login'
   end
+end
+
+get '/logout' do
+  session.clear
+  redirect '/'
 end
 
 get '/signup' do
   erb :'auth/signup'
 end
 
+
+
 post '/signup' do
   @user = User.create(params[:user])
   if @user
     session[:user_id] = @user.id
-    redirect '/'
+    redirect "/users/#{@user.id}"
   else
-    redirect '/signup'
+    redirect '/'
   end
 end
 

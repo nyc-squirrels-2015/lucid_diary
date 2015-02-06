@@ -1,0 +1,6 @@
+<h1><%= @current_category.title %></h1>
+<% @dreams.each do |dream| %>
+	
+ 	<h5><%= dream.title %> </h5>	
+	<p><%= dream.content %></p>	
+<% end %>

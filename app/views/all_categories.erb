@@ -1,0 +1,4 @@
+<h3>All Categories</h3>
+<% @categories.each do |category| %>
+<p><a href="/categories/<%=category.id %>"><%= category.title %></a></p>
+<% end %>

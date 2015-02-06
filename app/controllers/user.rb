@@ -6,3 +6,11 @@ get '/users/:id' do
     redirect '/login'
   end
 end
+
+delete '/users/:id' do |id|
+  p "USER ID: #{id} TEST TEST TEST"
+  User.find(id).destroy
+  redirect "/"
+end
+
+

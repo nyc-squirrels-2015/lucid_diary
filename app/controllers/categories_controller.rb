@@ -1,5 +1,5 @@
 get '/categories/new' do
-  erb :category_form
+  erb :'category/category_form'
 end
 
 post '/categories' do
@@ -11,15 +11,19 @@ end
 get '/categories' do
 
   @categories =  Category.all
-  p @categories 
-  erb :all_categories
+  @categories 
+  erb :'category/all_categories'
 
 end
 
 get '/categories/:category_id' do
   @current_category = Category.find_by(id: params[:category_id])
-
-  erb :current_category
+  @dreams = Dream.where(category_id: params[:category_id])
+  puts ""
+  puts ""
+  puts ""
+  p @dreams
+  erb :'category/current_category'
   #show all dream articles for category
 end
 

@@ -5,3 +5,7 @@
   <li><%=comment.content%></li>
 <%end%>
 </ul>
+
+<%if current_user%>
+  <%=erb :'comment/new', layout:false %>
+<%end%>

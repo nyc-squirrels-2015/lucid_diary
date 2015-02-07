@@ -3,3 +3,8 @@
 .user {
   font-style:italic;
 }
+
+ul li {
+  list-style-type: none;
+  padding-bottom: 20px;
+}

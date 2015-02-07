@@ -8,3 +8,7 @@ ul li {
   list-style-type: none;
   padding-bottom: 20px;
 }
+
+#comment-box {
+  padding-bottom:20px;
+}

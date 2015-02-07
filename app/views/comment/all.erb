@@ -1,0 +1,6 @@
+<ol>
+<%@dream.comments.each do |comment| %>
+<li><%=comment.content%></li>
+<p>By <%=comment.user.name%></p>
+<%end%>
+</ol>

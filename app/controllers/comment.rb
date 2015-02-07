@@ -1,4 +1,4 @@
-get '/dreams/:id/comments/all' do
+get '/dreams/:id/comments' do
   @dream = Dream.find(params[:id])
   erb :'comment/all'
 end

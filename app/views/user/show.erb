@@ -1,9 +1,19 @@
 <% if current_user %>
 <h1><%=@user.name%>'s Page</h1>
+
+<% @user.dreams do |dream| %>
+  <a href="/users/<%= users.id %>/dream/<%= dream.id %>">
+    <%= dream.content %>
+  </a>
+<% end %>
+
   <form action="/users/<%=@user.id%>" method="POST">
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete Account">
+  </form>
+
+<form action="/categories" method="GET">
+    <input type="submit" value="View All Categories">
 </form>
 <%end%>
-
 

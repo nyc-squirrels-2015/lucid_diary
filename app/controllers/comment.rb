@@ -1,13 +1,13 @@
-get '/dreams/:id/comments' do
+get '/dreams/:id' do
   @dream = Dream.find(params[:id])
   erb :'comment/all'
 end
 
-get '/comment/new' do
+get '/dreams/:id/comment/new' do
   erb :'comment/new'
 end
 
 post '/comment' do
   comment = Comment.create(params[:comment])
-  redirect "/dreams/#{comment.dream_id}/comments/all"
+  redirect "/dreams/#{comment.dream_id}"
 end

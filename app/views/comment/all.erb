@@ -1,6 +1,7 @@
-<ol>
+<h2>Comments</h2>
+<ul>
 <%@dream.comments.each do |comment| %>
-<li><%=comment.content%></li>
-<p><span class="user">By <%=comment.user.name%></span></p>
+  <p><a href="/users/<%=comment.user_id%>"><%=comment.user.name%></a></span> at <%=comment.created_at%><span class="user"></p>
+  <li><%=comment.content%></li>
 <%end%>
-</ol>
+</ul>

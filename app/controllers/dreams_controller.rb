@@ -28,11 +28,11 @@ end
 #   erb :'comment/all'
 # end
 
-get '/dreams/:id/comment/new' do
-  erb :'comment/new'
-end
+# get '/dreams/:id/comment/new' do
+#   erb :'comment/new'
+# end
 
-post '/comment' do
-  comment = Comment.create(params[:comment])
-  redirect "/dreams/#{comment.dream_id}"
+post '/categories/:category_id/dreams/:dream_id' do
+  @comment = Comment.create(params[:comment])
+  redirect "/categories/#{comment.category_id}/dreams/#{category.dream_id}"
 end

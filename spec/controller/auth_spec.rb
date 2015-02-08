@@ -10,4 +10,9 @@ describe "Auth" do
     get '/'
     expect(last_response.body).to include("login")
   end
+
+  it 'should have a signup' do
+    get '/'
+    expect(last_response.body).to include("signup")
+  end
 end

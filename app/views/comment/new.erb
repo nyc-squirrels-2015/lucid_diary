@@ -1,0 +1,13 @@
+<%if current_user%>
+<h3>Submit a comment</h3>
+<div id="new-comment-form">
+  <form action="/comment" method="POST">
+    <div id="comment-box">
+      <textarea rows="4" cols="50" name="comment[content]"></textarea>
+    </div>
+    <div class="submit-button">
+      <input type="submit">
+    </div>
+  </form>
+</div>
+<%end%>

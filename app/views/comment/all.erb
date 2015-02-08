@@ -1,0 +1,18 @@
+<div class="dream-title">
+  <h1><%=@dream.title%></h1>
+</div>
+
+<div class="dream-content">
+  <h3><%=@dream.content%></h3>
+</div>
+
+<h2>Comments</h2>
+<ul>
+<%@dream.comments.each do |comment| %>
+  <p><span class="user"><a href="/users/<%=comment.user_id%>"><%=comment.user.name%></a> at <%=comment.created_at%></span></p>
+  <li><span class="user-comment"><%=comment.content%></span></li>
+<%end%>
+</ul>
+
+
+  <%=erb :'comment/new', layout:false %>

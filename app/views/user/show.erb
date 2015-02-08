@@ -7,13 +7,27 @@
 <% end %>
 
 <% if current_user %>
-  <form action="/users/<%=@user.id%>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Account">
-  </form>
-
 <form action="/categories" method="GET">
     <input type="submit" value="View All Categories">
 </form>
+
+<br>
+
+<form action="/categories/new" method="GET">
+    <input type="submit" value="Add Category">
+</form>
+
+</br>
+
+<form action="/categories/:category_id/dreams/new" method="GET">
+   <input type="submit" value="Add Dream">
+</form>
+
+<br>
+
+<form action="/users/<%=@user.id%>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Account">
+  </form>
 <%end%>
 

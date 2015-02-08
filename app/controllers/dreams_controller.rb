@@ -1,5 +1,21 @@
-get '/category/:category_id/dreams/:dream_id' do
+get '/categories/:category_id/dreams/new' do
+  erb :'dream/dream_form'
+end
+
+
+post '/categories/:category_id/dreams/new' do
+  @new_dream = Dream.create(title: params[:title], content: params[:content], user_id: session[:user_id], category_id: params[:category_id])
+
+    redirect "/categories/#{@new_dream.category_id}/dreams/#{@new_dream.id}"
+end
+
+
+
+get '/categories/:category_id/dreams/:dream_id' do
   @current_dream = Dream.find_by(id: params[:dream_id])
-  erb :current_dream
+  erb :'dream/current_dream'
 
 end
+
+
+

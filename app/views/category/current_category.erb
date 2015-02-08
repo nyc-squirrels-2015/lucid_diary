@@ -3,5 +3,9 @@
 <% @dreams.each do |dream| %>
 
  	<h5><a href="<%=dream.category_id%>/dreams/<%=dream.id%>"><%= dream.title %></a> </h5>
- 	
+
 <% end %>
+
+<form action="/categories/:category_id/dreams/new" method="GET">
+   <input type="submit" value="Add Dream">
+</form>

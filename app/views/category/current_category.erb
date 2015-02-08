@@ -6,6 +6,6 @@
 
 <% end %>
 
-<form action="/categories/:category_id/dreams/new" method="GET">
+<form action="/categories/<%= @current_category.id %>/dreams/new" method="GET">
    <input type="submit" value="Add Dream">
 </form>

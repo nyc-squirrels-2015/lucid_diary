@@ -3,15 +3,12 @@ get '/categories/new' do
 end
 
 post '/categories' do
-  p params[:title]
   new_category = Category.create(title: params[:title])
   redirect "/categories/#{new_category.id}"
 end
 
 get '/categories' do
-
   @categories =  Category.all
-  @categories
   erb :'category/all_categories'
 
 end

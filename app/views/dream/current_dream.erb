@@ -1,3 +1,4 @@
+
 <div class="dream-title">
   <h1><%=@current_dream.title%></h1>
 </div>
@@ -16,8 +17,10 @@
 
 </ul>
 
-
   <%=erb :'comment/new', layout:false %>
+
+<h1><%= @current_dream.title %></h1>
+<p><%= @current_dream.content %></p>
 
 <% if session[:user_id] == @current_dream.user_id %>
   <h3> i made this dream </h3>

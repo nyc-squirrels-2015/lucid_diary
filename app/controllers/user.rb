@@ -4,7 +4,6 @@ get '/users/:id' do
 end
 
 delete '/users/:id' do |id|
-  p "USER ID: #{id} TEST TEST TEST"
   User.find(id).destroy
   redirect "/"
 end

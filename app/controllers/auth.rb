@@ -1,3 +1,4 @@
+
 get '/login' do
  erb :'auth/login'
 end
@@ -32,5 +33,4 @@ post '/signup' do
     redirect '/'
   end
 end
-
 

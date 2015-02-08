@@ -1,5 +1,21 @@
-<h1><%= @current_dream.title %></h1>
-<p><%= @current_dream.content %></p>
+<div class="dream-title">
+  <h1><%=@current_dream.title%></h1>
+</div>
+
+<div class="dream-content">
+  <h3><%=@current_dream.content%></h3>
+</div>
+
+<h2>Comments</h2>
+<ul>
+<%@current_dream.comments.each do |comment| %>
+  <p><span class="user"><a href="/users/<%=comment.user_id%>"><%=comment.user.name%></a> at <%=comment.created_at%></span></p>
+  <li><span class="user-comment"><%=comment.content%></span></li>
+<%end%>
+</ul>
+
+
+  <%=erb :'comment/new', layout:false %>
 
 <% if session[:user_id] == @current_dream.user_id %>
   <h3> i made this dream </h3>

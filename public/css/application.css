@@ -225,10 +225,9 @@ text-align: center;
 
 header {
 	width: 98%;
-	background: rgba(3,3,3,.4);
-
+	background: none;
 	padding: 5px 1% 5px 1%;
-
+	position: absolute;
 }
 i {
 	color: white;

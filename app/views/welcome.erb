@@ -1,5 +1,22 @@
-<h1>Lucidity</h1>
+<div id="banner">
+<h1>Lucidity allows you to share your dreams with the world.</h1>
+	<div class="box">
 
-<a href="/signup">Sign Up</a> | <a href="/login">Login</a>
-<h3>Please click below to sign up</h3>
-<a href="/signup">Create Account</a>
+		<% if current_user %>
+			<h3>Record Your Dream</h3>
+
+		<p><div class="clock"><%= Time.now.strftime "%H:%M" %></div></p>
+		
+		<p><i class="fa fa-cloud"></i>
+<input value="Dream Title" type="text"></p>
+		<textarea name="" id="" cols="30" rows="5">Type Your Dream Here.</textarea>
+
+		<% else %>
+		<p><h3>Share Your Dream Today!</h3></p>
+		<p><a href="/signup">Create an Account</a></p>
+
+		<% end %>
+	</div>
+
+</div>
+

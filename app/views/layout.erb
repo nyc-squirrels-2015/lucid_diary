@@ -6,6 +6,8 @@
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
   -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="/css/normalize.css">
   <!--
     application.css is where you put your styles
@@ -15,23 +17,31 @@
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
+  <script src="/js/application.js"></script> 
+
+
+     <script src="/js/application.js"></script>
+       <script src="/js/clock.js"></script>
+
 
   <title></title>
 </head>
 <body>
-<div id="content">
-  <header>
-    <a href="/"><img src="/img/tumblr_lxtdi0BiHb1r9crd8o1_500.gif" class="logo"></a>
-    <div id="login-toolbar">
-        <%if current_user%>
+  <div id="content">
+    <header><span><a href="/">Lucidity</a></span>
+      <div id="login-toolbar">
+        <% if current_user  %>
+        <span>Hi <%= current_user.name %></span>
+        <a href="/users/<%= current_user.id %>">My Dashboard</a>
         <a href="/logout">Logout</a>
-        <%else%>
+        <% else %>
         <a href="/login">Login</a>
-        <%end%>
+        <a href="/signup">Signup</a>
+        <% end %>
+      </div>
 
-  </header>
-  <%= yield %>
-</div>
+    </header>
+    <%= yield %>
+  </div>
 </body>
 </html>

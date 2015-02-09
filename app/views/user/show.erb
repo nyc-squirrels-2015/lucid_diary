@@ -8,7 +8,11 @@
   <br>
   <br>
   <h1>Dream on <%=@user.name%></h1>
-
+  <% @user.dreams do |dream| %>
+  <a href="/users/<%= users.id %>/dreams/<%= dream.id %>">
+    <%= dream.content %>
+  </a>
+<% end %>
 
 
   <br>

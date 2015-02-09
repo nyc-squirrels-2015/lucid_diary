@@ -7,17 +7,12 @@
 <container align="center">
   <br>
   <br>
-  <h1><%=@user.name%></h1>
-  <br>
+  <h1>Dream on <%=@user.name%></h1>
 
-  <% @user.dreams do |dream| %>
-    <a href="/users/<%= users.id %>/dream/<%= dream.id %>">
-      <%= dream.content %>
-    </a>
-  <% end %>
+
 
   <br>
-  <hr width="75%" style="color:gray">
+  <hr width="75%">
   <br>
   <br>
   <br>

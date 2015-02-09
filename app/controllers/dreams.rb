@@ -14,12 +14,12 @@ get '/categories/:category_id/dreams/:dream_id' do
 end
 
 post '/categories/:category_id/dreams/:dream_id' do
-  @comment = Comment.create(params[:comment])
-  redirect "/categories/#{comment.category_id}/dreams/#{category.dream_id}"
+  @comment = Comment.create(content: params[:content], user_id: session[:user_id], dream_id: params[:dream_id])
+  redirect "categories/#{params[:category_id]}/dreams/#{params[:dream_id]}"
 end
 
 
-
+	
 
 # ????????????
 

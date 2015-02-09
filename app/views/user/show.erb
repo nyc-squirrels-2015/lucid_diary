@@ -1,13 +1,11 @@
 
 
-<div><img style="height:200px;width:100%" src="http://i.imgur.com/hXfCgmH.png?1">
+<div id="banner2">
+  <h1>Dream on <%=@user.name%></h1>
 </div>
 
 
-<container align="center">
-  <br>
-  <br>
-  <h1>Dream on <%=@user.name%></h1>
+<div class="container">
   <% @user.dreams do |dream| %>
   <a href="/users/<%= users.id %>/dreams/<%= dream.id %>">
     <%= dream.content %>
@@ -15,48 +13,21 @@
 <% end %>
 
 
-  <br>
-  <hr width="75%">
-  <br>
-  <br>
-  <br>
+
   <% if current_user %>
-  <form action="/categories" method="GET">
-      <input style="background:white; border:none" type="submit" value="View All Categories">
-  </form>
-  <br>
-  <br>
-  <br>
-  <br>
-  <hr width="50%">
-  <br>
-  <br>
-  <br>
-  <br>
-  <form action="/categories/new" method="GET">
-      <input style="background:white; border:none" type="submit" value="Add Category">
-  </form>
+  <div><form action="/categories" method="GET">
+        <input style="background:white; border:none" type="submit" value="View All Categories">
+    </form></div>
+ 
+ <div> <form action="/categories/new" method="GET">
+       <input style="background:white; border:none" type="submit" value="Add Category">
+   </form></div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <hr width="50%">
-  <br>
-  <br>
-  <br>
-  <br>
-  <form action="/users/<%=@user.id%>" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-      <input style="background:white; border:none" type="submit" value="Delete Account">
-    </form>
+
+  <div><form action="/users/<%=@user.id%>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input style="background:white; border:none" type="submit" value="Delete Account">
+      </form></div>
   <%end%>
-  <br>
-  <br>
-  <br>
-  <br>
-  <hr width="75%">
-  <br>
-  <br>
 
-</container>
+</div>

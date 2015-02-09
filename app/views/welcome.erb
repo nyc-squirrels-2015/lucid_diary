@@ -1,15 +1,6 @@
 
 
-<header>
-    <div id="login-toolbar">
-        <%if current_user%>
-        <a href="/logout">Logout</a>
-        <%else%>
-        <a href="/login">Login</a>
-        <%end%>
-      </div>
-
-  </header><div id="banner">
+<div id="banner">
 <h1>Lucidity allows you to share your dreams with the world.</h1>
   <div class="box">
 
@@ -19,15 +10,14 @@
     <p><div class="clock"><%= Time.now.strftime "%H:%M" %></div></p>
 
     <p><i class="fa fa-cloud"></i>
-<input value="Title" type="text"></p>
-    <textarea name="" id="" cols="30" rows="5">Type Your Dream Here.</textarea>
-
-    <% else %>
+<input type="text" placeholder="Type your Dream Here."></p>
+    <textarea name="" id="" cols="30" rows="5">Type Your Title.</textarea>
+<% else %>
     <p><h3>Share Your Dream Today!</h3></p>
-    <p><a href="/signup">Create an Account</a></p>
-
+    <p><a href="/login">Sign In</a></p>
+      <p><a href="/signup">Create an Account</a></p>
+    
     <% end %>
-
   </div>
 
 

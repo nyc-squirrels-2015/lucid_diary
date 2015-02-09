@@ -1,6 +1,5 @@
 require_relative '../spec_helper'
 
-
 describe 'User Spec' do
   let(:user) {User.create(name:'Steve Rogers',password:'password')}
 
@@ -14,4 +13,5 @@ describe 'User Spec' do
     expect(last_response.body).to include('Steve Rogers')
     expect(last_response.body).to include('login')
   end
+
 end

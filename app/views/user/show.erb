@@ -5,7 +5,10 @@
 
 
 <container align="center">
-  <h1><%=@user.name%>'s Page</h1>
+  <br>
+  <br>
+  <h1><%=@user.name%></h1>
+  <br>
 
   <% @user.dreams do |dream| %>
     <a href="/users/<%= users.id %>/dream/<%= dream.id %>">
@@ -13,25 +16,48 @@
     </a>
   <% end %>
 
+  <br>
+  <hr width="75%" style="color:gray">
+  <br>
+  <br>
+  <br>
   <% if current_user %>
   <form action="/categories" method="GET">
-      <input type="submit" value="View All Categories">
+      <input style="background:white; border:none" type="submit" value="View All Categories">
   </form>
-
   <br>
   <br>
-
+  <br>
+  <br>
+  <hr width="50%">
+  <br>
+  <br>
+  <br>
+  <br>
   <form action="/categories/new" method="GET">
-      <input type="submit" value="Add Category">
+      <input style="background:white; border:none" type="submit" value="Add Category">
   </form>
 
   <br>
   <br>
-
+  <br>
+  <br>
+  <hr width="50%">
+  <br>
+  <br>
+  <br>
+  <br>
   <form action="/users/<%=@user.id%>" method="POST">
       <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" value="Delete Account">
+      <input style="background:white; border:none" type="submit" value="Delete Account">
     </form>
   <%end%>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr width="75%">
+  <br>
+  <br>
 
 </container>

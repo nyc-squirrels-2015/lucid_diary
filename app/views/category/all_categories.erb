@@ -1,7 +1,23 @@
-<h3>All Categories</h3>
-<% @categories.each do |category| %>
-  <p>
-    <a href="/categories/<%=category.id %>"><%= category.title %></a>
-  </p>
-<% end %>
 
+<div align="center">
+
+  <br>
+  <br>
+  <h1>Dream Themes</h1>
+  <br>
+  <hr width="50%">
+  <% @categories.each do |category| %>
+
+    <br>
+    <p>
+      <a href="/categories/<%=category.id %>" style="text-decoration:none; color:black"><%= category.title %></a>
+    </p>
+    <br>
+    <hr width="33%">
+
+
+  <% end %>
+  <br>
+  <br>
+
+</div>

@@ -1,19 +1,50 @@
+<container align="center">
+  <br>
+  <br>
 
-<div class="dream-title">
-  <h1><%=@current_dream.title%></h1>
-</div>
+  <div class="title">
+    <h1><%=@current_dream.title%></h1>
+  </div>
+  <br>
+  <br>
+    <hr width="50%">
+    <br>
 
-<div class="dream-content">
-  <h3><%=@current_dream.content%></h3>
-</div>
+  <div style="height:200px;500px;margin-top:50px " align="center" class="dream-content">
+    <p style="width:300px;height:50%"><%=@current_dream.content%><p>
+  </div>
+  <hr width="50%">
 
-<h2>Comments</h2>
+  <br>
+  <br>
+  <h2>Comments</h2>
+  <br>
+  <br>
+  <hr width="33%">
+  <br>
 
-<ul>
-<%@current_dream.comments.each do |comment| %>
-  <p><span class="user"><a href="/users/<%=comment.user_id%>"><%=comment.user.name%></a> at <%=comment.created_at%></span></p>
-  <li><span class="user-comment"><%=comment.content%></span></li>
-<%end%>
-</ul>
 
-  <%=erb :'comment/new', layout:false %>
+  <ul>
+  <%@current_dream.comments.each do |comment| %>
+
+    <p><span class="user"><a style="text-decoration:none; color:black" href="/users/<%=comment.user_id%>"><%=comment.user.name%></a> at <%=comment.created_at%></span></p>
+    <br>
+    <br>
+    <li style="list-style-type:none" ><span class="user-comment"><%=comment.content%></span></li>
+    <br>
+    <br>
+    <br>
+
+    <hr width="33%">
+    <br>
+  <%end%>
+
+
+  </ul>
+
+
+    <%=erb :'comment/new', layout:false %>
+  <br>
+  <br>
+
+</container>

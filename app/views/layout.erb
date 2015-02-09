@@ -17,7 +17,7 @@
   <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script> 
+  <script src="/js/application.js"></script>
 
 
      <script src="/js/application.js"></script>
@@ -27,21 +27,11 @@
   <title></title>
 </head>
 <body>
-  <div id="content">
-    <header><span><a href="/">Lucidity</a></span>
-      <div id="login-toolbar">
-        <% if current_user  %>
-        <span>Hi <%= current_user.name %></span>
-        <a href="/users/<%= current_user.id %>">My Dashboard</a>
-        <a href="/logout">Logout</a>
-        <% else %>
-        <a href="/login">Login</a>
-        <a href="/signup">Signup</a>
-        <% end %>
-      </div>
 
-    </header>
-    <%= yield %>
-  </div>
+<div id="content">
+
+  <%= yield %>
+</div>
+
 </body>
 </html>

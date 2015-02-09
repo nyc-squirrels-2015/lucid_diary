@@ -5,7 +5,7 @@ end
 
 delete '/users/:id' do |id|
   User.find(id).destroy
-  redirect "/"
+  redirect "/signup"
 end
 
 

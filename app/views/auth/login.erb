@@ -1,13 +1,13 @@
 
-<div id="login_box">
-	<% if current_user  %>
-		You are already logged in.
-	<% else %>
-	<form action="/login" method="post">
-		<div><input type="text" name="user[name]" placeholder="Username"></div>
-		<div><input type="password" name="user[password]" placeholder="Password"></div>
-		<div><input type="submit" value="Log In"></div>
-	</form>
-	<% end %>
-	
+<h3>Signup. Dream on.</h3>
+
+<div class="singup_form">
+
+<form action="/login" method="post">
+  <input type="text" name="user[name]" placeholder="Your name here">
+  <input type="password" name="user[password]" placeholder="Your password here">
+  <input type="submit">
+</form>
+
+
 </div>

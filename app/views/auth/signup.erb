@@ -1,14 +1,19 @@
-<div id="login_box">
-	<% if current_user  %>
-	You are already logged in.
-	<% else %>
-	<form action="/signup" method="post">
 
-		<div><input type="text" name="user[name]" placeholder="Choose a username"></div>
-		<div><input type="password" name="user[password]" placeholder="Password"></div>
-		<div><input type="password" name="user[password_confirmation]" placeholder="Confirm password"></div>
-		<div><input type="submit" value="Sign Up"></div>
-	</form>
-	<% end %>
+<div><img style="height:200px;width:100%" src="http://photos-for-you.com/wp-content/uploads/2011/08/Billowing-Clouds-1-Black-White-Film.jpg">
+  </div>
+
+
+<div class="all" align="center">
+
+  <h3>Signup. Dream on.</h3>
+
+  <div class="singup_form">
+  <form action="/signup" method="post">
+    <input type="text" name="user[name]" placeholder="Name">
+    <input type="password" name="user[password]" placeholder="Password">
+    <input type="password" name="user[password_confirmation]" placeholder="Password">
+    <input type="submit">
+  </form>
+
+  </div>
 </div>
-

@@ -17,6 +17,8 @@ describe "Auth" do
     expect(last_response.body).to include("signup")
   end
 
+
+  #ZM: Do Not Leave Commented out code in commits
   it 'should respond to signup' do
     post '/signup', params={ user:{name:'Steve Rogers',password:'password'}}
     expect(last_response).to be_redirect

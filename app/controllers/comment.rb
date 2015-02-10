@@ -3,6 +3,8 @@ get 'categories/:category_id/dreams/:id' do
   erb :'comment/all'
 end
 
+#ZM: SOOOOOOO MUCH commented out code 
+
 # post 'categories/:category_id/dreams/:id' do
 #   comment = Comment.create(content: params[:content], user_id: session[:user_id], dream_id: params[:id]	)
 #   redirect "../dreams"

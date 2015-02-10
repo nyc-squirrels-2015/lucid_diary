@@ -1,3 +1,4 @@
+//ZM: You should re implement this using what you know about JS now
 function clock() {// We create a new Date object and assign it to a variable called "time".
 var time = new Date(),
     

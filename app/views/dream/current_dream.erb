@@ -1,8 +1,10 @@
+<!-- #ZM Do not use inline styling, do not use <br> tags. -->
 <container align="center">
   <br>
   <br>
 
   <div class="title">
+      <!-- #ZM Puts spaces after your embed ruby symbols -->
     <h1><%=@current_dream.title%></h1>
   </div>
   <br>
@@ -26,7 +28,7 @@
 
   <ul>
   <%@current_dream.comments.each do |comment| %>
-
+  <!-- #ZM - This looks like a perfect place for us to create a partial and send in locals to much code in one loop here -->
     <p><span class="user"><a style="text-decoration:none; color:black" href="/users/<%=comment.user_id%>"><%=comment.user.name%></a> at <%=comment.created_at%></span></p>
     <br>
     <br>
@@ -37,6 +39,8 @@
 
     <hr width="33%">
     <br>
+
+
   <%end%>
 
 

@@ -1,3 +1,4 @@
+#ZM Besides the empty post route, these look really good
 get '/categories/new' do
   erb :'category/category_form'
 end

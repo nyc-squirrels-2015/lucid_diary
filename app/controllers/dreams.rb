@@ -4,6 +4,8 @@ end
 
 post '/categories/:category_id/dreams/new' do
   @category = Category.find_by(id: params[:category_id])
+
+  #ZM: If we used named inputs such as name=dream[title] we could just use params[:dream] here instead
   @new_dream = Dream.create(title: params[:title], content: params[:content], user_id: session[:user_id], category_id: params[:category_id])
     redirect "/categories/#{@new_dream.category_id}/dreams/#{@new_dream.id}"
 end
@@ -18,7 +20,7 @@ post '/categories/:category_id/dreams/:dream_id' do
   redirect "categories/#{params[:category_id]}/dreams/#{params[:dream_id]}"
 end
 
-
+#ZM: DO NOT COMMIT Commented Out Code
 	
 
 # ????????????

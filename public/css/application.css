@@ -19,6 +19,7 @@ ul li {
 #comment-box {
   padding-bottom:20px;
 }
+/* ZM: leaving commented in code is sloppy to onlooking eyes
 
 /*
 .logo {
@@ -226,6 +227,9 @@ text-align: center;
 
 }
 /*end of media query for medium height*/
+
+
+/* #ZM: Can you explaine to me what is happening here? All of your styles are duplicated, this file is huge.
 
 /*Media Query for 1px and 649px*/
 @media all and (min-width: 1px) and (max-width: 649px) {

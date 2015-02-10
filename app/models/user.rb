@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   validates :name, uniqueness: true
   validates :password, presence: true
 
+  #ZM: DO NOT LEAVE IN COMMENTED OUT CODE
+
   # def self.authenticate(name,password)
   #   @user = User.find_by(name: name)
   #   if @user && @user.password == password

@@ -4,7 +4,7 @@
   <h1>Dream on <%=@user.name%></h1>
 </div>
 
-
+<!-- ZM: Good Work using drying up this code  -->
 <div class="container">
   <% @user.dreams do |dream| %>
   <a href="/users/<%= users.id %>/dreams/<%= dream.id %>">
@@ -12,8 +12,8 @@
   </a>
 <% end %>
 
-
-
+<!-- 
+ZM: Again you are changing view content on the fly depending on if there is a current user or not. This is not the responsibility of the view. The controller should decide which content to render.  -->
   <% if current_user %>
   <div><form action="/categories" method="GET">
         <input style="background:white; border:none" type="submit" value="View All Categories">
